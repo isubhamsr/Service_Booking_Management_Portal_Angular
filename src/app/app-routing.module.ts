@@ -5,6 +5,7 @@ import { ProductdetailsComponent } from './conponents/products/productdetails/pr
 import { ProductsComponent } from './conponents/products/products.component';
 import { UpdateproductComponent } from './conponents/products/updateproduct/updateproduct.component';
 import { BookingComponent } from './conponents/service/booking/booking.component';
+import { BookserviceComponent } from './conponents/service/bookservice/bookservice.component';
 import { ServiceComponent } from './conponents/service/service.component';
 import { SigninComponent } from './conponents/signin/signin.component';
 import { SignupComponent } from './conponents/signup/signup.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'users/userupdate/:id', component: UserupdateComponent},
   {path: 'services', component: ServiceComponent},
   {path: 'services/bookings', component: BookingComponent},
+  {path: 'services/book/:id', component: BookserviceComponent},
 
   {path: 'products', component: ProductsComponent},
   {path: 'products/adproduct', component: AddproductComponent},
