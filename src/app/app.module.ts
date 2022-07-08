@@ -10,6 +10,8 @@ import { UserComponent } from './conponents/user/user.component';
 import { UserlistComponent } from './conponents/user/userlist/userlist.component';
 import { UserdetailsComponent } from './conponents/user/userdetails/userdetails.component';
 import { UserupdateComponent } from './conponents/user/userupdate/userupdate.component';
+import { ServiceComponent } from './conponents/service/service.component';
+import { BookingComponent } from './conponents/service/booking/booking.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { UserupdateComponent } from './conponents/user/userupdate/userupdate.com
     UserComponent,
     UserlistComponent,
     UserdetailsComponent,
-    UserupdateComponent
+    UserupdateComponent,
+    ServiceComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,
