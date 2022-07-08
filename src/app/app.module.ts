@@ -15,6 +15,7 @@ import { BookingComponent } from './conponents/service/booking/booking.component
 import { ProductsComponent } from './conponents/products/products.component';
 import { ProductlistComponent } from './conponents/products/productlist/productlist.component';
 import { AddproductComponent } from './conponents/products/addproduct/addproduct.component';
+import { UpdateproductComponent } from './conponents/products/updateproduct/updateproduct.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AddproductComponent } from './conponents/products/addproduct/addproduct
     BookingComponent,
     ProductsComponent,
     ProductlistComponent,
-    AddproductComponent
+    AddproductComponent,
+    UpdateproductComponent
   ],
   imports: [
     BrowserModule,
