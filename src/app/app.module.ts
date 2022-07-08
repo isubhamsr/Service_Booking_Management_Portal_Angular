@@ -20,6 +20,7 @@ import { ProductdetailsComponent } from './conponents/products/productdetails/pr
 import { BookserviceComponent } from './conponents/service/bookservice/bookservice.component';
 import { ServicereportComponent } from './conponents/service/servicereport/servicereport.component';
 import { ServicereporlistComponent } from './conponents/service/servicereport/servicereporlist/servicereporlist.component';
+import { AddservicereporrtComponent } from './conponents/service/servicereport/addservicereporrt/addservicereporrt.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ServicereporlistComponent } from './conponents/service/servicereport/se
     ProductdetailsComponent,
     BookserviceComponent,
     ServicereportComponent,
-    ServicereporlistComponent
+    ServicereporlistComponent,
+    AddservicereporrtComponent
   ],
   imports: [
     BrowserModule,
