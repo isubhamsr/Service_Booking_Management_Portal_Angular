@@ -14,6 +14,7 @@ import { ServiceComponent } from './conponents/service/service.component';
 import { BookingComponent } from './conponents/service/booking/booking.component';
 import { ProductsComponent } from './conponents/products/products.component';
 import { ProductlistComponent } from './conponents/products/productlist/productlist.component';
+import { AddproductComponent } from './conponents/products/addproduct/addproduct.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProductlistComponent } from './conponents/products/productlist/productl
     ServiceComponent,
     BookingComponent,
     ProductsComponent,
-    ProductlistComponent
+    ProductlistComponent,
+    AddproductComponent
   ],
   imports: [
     BrowserModule,
