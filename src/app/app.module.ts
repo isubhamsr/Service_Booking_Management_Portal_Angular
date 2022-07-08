@@ -12,6 +12,8 @@ import { UserdetailsComponent } from './conponents/user/userdetails/userdetails.
 import { UserupdateComponent } from './conponents/user/userupdate/userupdate.component';
 import { ServiceComponent } from './conponents/service/service.component';
 import { BookingComponent } from './conponents/service/booking/booking.component';
+import { ProductsComponent } from './conponents/products/products.component';
+import { ProductlistComponent } from './conponents/products/productlist/productlist.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { BookingComponent } from './conponents/service/booking/booking.component
     UserdetailsComponent,
     UserupdateComponent,
     ServiceComponent,
-    BookingComponent
+    BookingComponent,
+    ProductsComponent,
+    ProductlistComponent
   ],
   imports: [
     BrowserModule,
