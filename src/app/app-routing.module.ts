@@ -4,6 +4,7 @@ import { AddproductComponent } from './conponents/products/addproduct/addproduct
 import { ProductdetailsComponent } from './conponents/products/productdetails/productdetails.component';
 import { ProductsComponent } from './conponents/products/products.component';
 import { UpdateproductComponent } from './conponents/products/updateproduct/updateproduct.component';
+import { ProfileComponent } from './conponents/profile/profile.component';
 import { BookingComponent } from './conponents/service/booking/booking.component';
 import { BookserviceComponent } from './conponents/service/bookservice/bookservice.component';
 import { ServiceComponent } from './conponents/service/service.component';
@@ -28,6 +29,8 @@ const routes: Routes = [
 
   {path: 'services/servicereports', component: ServicereportComponent},
   {path: 'services/addservicereport', component: AddservicereporrtComponent},
+
+  {path: 'profile', component: ProfileComponent},
 
   {path: 'products', component: ProductsComponent},
   {path: 'products/adproduct', component: AddproductComponent},
