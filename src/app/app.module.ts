@@ -18,6 +18,8 @@ import { AddproductComponent } from './conponents/products/addproduct/addproduct
 import { UpdateproductComponent } from './conponents/products/updateproduct/updateproduct.component';
 import { ProductdetailsComponent } from './conponents/products/productdetails/productdetails.component';
 import { BookserviceComponent } from './conponents/service/bookservice/bookservice.component';
+import { ServicereportComponent } from './conponents/service/servicereport/servicereport.component';
+import { ServicereporlistComponent } from './conponents/service/servicereport/servicereporlist/servicereporlist.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { BookserviceComponent } from './conponents/service/bookservice/bookservi
     AddproductComponent,
     UpdateproductComponent,
     ProductdetailsComponent,
-    BookserviceComponent
+    BookserviceComponent,
+    ServicereportComponent,
+    ServicereporlistComponent
   ],
   imports: [
     BrowserModule,

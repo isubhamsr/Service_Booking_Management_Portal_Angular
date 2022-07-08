@@ -7,6 +7,7 @@ import { UpdateproductComponent } from './conponents/products/updateproduct/upda
 import { BookingComponent } from './conponents/service/booking/booking.component';
 import { BookserviceComponent } from './conponents/service/bookservice/bookservice.component';
 import { ServiceComponent } from './conponents/service/service.component';
+import { ServicereportComponent } from './conponents/service/servicereport/servicereport.component';
 import { SigninComponent } from './conponents/signin/signin.component';
 import { SignupComponent } from './conponents/signup/signup.component';
 import { UserComponent } from './conponents/user/user.component';
@@ -23,6 +24,8 @@ const routes: Routes = [
   {path: 'services', component: ServiceComponent},
   {path: 'services/bookings', component: BookingComponent},
   {path: 'services/book/:id', component: BookserviceComponent},
+
+  {path: 'services/servicereports', component: ServicereportComponent},
 
   {path: 'products', component: ProductsComponent},
   {path: 'products/adproduct', component: AddproductComponent},
