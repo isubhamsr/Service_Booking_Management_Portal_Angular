@@ -39,7 +39,7 @@
     height: 70px;
   }
   
-  ul{
+  /* ul{
     float: left;
     display: flex;
     justify-content: center;
@@ -63,7 +63,7 @@
   
   ul li a:hover{
     color: #ff7200;
-  }
+  } */
   
   .search{
     width: 330px;
@@ -87,7 +87,7 @@
     border-top-left-radius: 5px;
   }
   
-  .btn{
+  /* .btn{
     width: 100px;
     height: 40px;
     background: #ff7200;
@@ -106,7 +106,7 @@
   
   .btn:focus{
     outline: none;
-  }
+  } */
   
   .srch:focus{
     outline: none;

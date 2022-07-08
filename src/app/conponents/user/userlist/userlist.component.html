@@ -1,0 +1,32 @@
+<div class="all">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">User Details</th>
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>mark45@mdo.com</td>
+                <td><a [routerLink]="['/users/userdetails', '1']"><button type="button" class="btn btn-warning">Details</button></a></td>
+                <td><a routerLink="/userupdate"><button type="button" class="btn btn-success">Update</button></a></td>
+                <td><button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>mark45@mdo.com</td>
+                <td><a routerLink="/userdetails"><button type="button" class="btn btn-warning">Details</button></a></td>
+                <td><a routerLink="/userupdate"><button type="button" class="btn btn-success">Update</button></a></td>
+                <td><button type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
