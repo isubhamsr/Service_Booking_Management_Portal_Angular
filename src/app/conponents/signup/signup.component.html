@@ -37,7 +37,12 @@
                     <input type="number" name="mobile" 
                     [(ngModel)]="mobile" 
                     [ngModelOptions]="{standalone: true}" placeholder="Enter Mobile Number Here">
-                    <button type="submit" class="btnn">Signup</button>
+                    <button type="submit" class="btnn">
+                        <div *ngIf="this.isSubmit != true; else elseBlock">Signup</div>
+                        <ng-template #elseBlock><div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                          </div></ng-template>                       
+                    </button>
                 </form>
                 <p class="link">Go to 
                     <a routerLink="/signin">Login</a>

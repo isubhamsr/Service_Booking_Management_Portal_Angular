@@ -17,6 +17,7 @@ export class SignupComponent implements OnInit {
     url = 'https://localhost:7002/api/User';
     error= false
     message!: string
+    isSubmit = false
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -25,6 +26,7 @@ export class SignupComponent implements OnInit {
 
   onSubmit(){
     console.log("ok");
+    this.isSubmit = true
     const signup = {
       name: this.name,
       email: this.email,
@@ -43,16 +45,19 @@ export class SignupComponent implements OnInit {
       if(error)
       {
         this.error = true;
+        this.isSubmit = false
         this.message = (<any>response).message
       }
       else{
         this.error = false;
       // this.toastr.success("Logged In successfully");
+      this.isSubmit = false
       this.router.navigate(["/signin"]);
       }
       
     }, err => {
       this.error = true;
+      this.isSubmit = false
       this.message = err.message
     });
 
