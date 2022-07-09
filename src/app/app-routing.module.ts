@@ -10,6 +10,7 @@ import { BookserviceComponent } from './conponents/service/bookservice/bookservi
 import { RequestbyusersComponent } from './conponents/service/requestbyusers/requestbyusers.component';
 import { ServiceComponent } from './conponents/service/service.component';
 import { AddservicereporrtComponent } from './conponents/service/servicereport/addservicereporrt/addservicereporrt.component';
+import { ReportbyuserComponent } from './conponents/service/servicereport/reportbyuser/reportbyuser.component';
 import { ReportdetailsComponent } from './conponents/service/servicereport/reportdetails/reportdetails.component';
 import { ServicereportComponent } from './conponents/service/servicereport/servicereport.component';
 import { UpdaterequestComponent } from './conponents/service/updaterequest/updaterequest.component';
@@ -35,6 +36,7 @@ const routes: Routes = [
   {path: 'services/booking/update/:id', component: UpdaterequestComponent},
   {path: 'services/bookings/byyou', component: RequestbyusersComponent},
   {path: 'services/servicereport/details/:id', component: ReportdetailsComponent},
+  {path: 'services/report/user', component: ReportbyuserComponent},
 
   {path: 'profile', component: ProfileComponent},
 
