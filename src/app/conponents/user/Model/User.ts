@@ -1,5 +1,6 @@
 export class User{
-    name!: string
-    email!: string
-    mobile!: number
+    Id!: number
+    Name!: string
+    Email!: string
+    Mobile!: number
 }
