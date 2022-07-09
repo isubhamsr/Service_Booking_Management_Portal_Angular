@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient,HttpHeaders  } from '@angular/common/http';
+import { CanActivate, Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -7,9 +9,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  name!: string
+    email!: string
+    password!: string
+    mobile!: number
+
+    url = 'https://localhost:7002/api/User';
+    error= false
+    message!: string
+
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
+    console.log("ok");
+    const signup = {
+      name: this.name,
+      email: this.email,
+      password: this.password,
+      mobile: this.mobile
+    }
+    console.log(signup);
+    
+    const credentials = JSON.stringify(signup);
+    this.http.post(this.url, credentials, {
+      headers: new HttpHeaders({
+        "Content-Type": "application/json"
+      })
+    }).subscribe(response => {
+      const error = (<any>response).error;
+      if(error)
+      {
+        this.error = true;
+        this.message = (<any>response).message
+      }
+      else{
+        this.error = false;
+      // this.toastr.success("Logged In successfully");
+      this.router.navigate(["/signin"]);
+      }
+      
+    }, err => {
+      this.error = true;
+      this.message = err.message
+    });
+
   }
 
 }
