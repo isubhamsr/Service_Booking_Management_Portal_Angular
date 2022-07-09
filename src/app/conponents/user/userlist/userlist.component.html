@@ -1,9 +1,9 @@
 <div class="all">
 
     <div *ngIf="this.error === true || this.status === 401; else elseBlock">
-        <div class="item" role="status">
-            <span>{{message}}</span>
-        </div>
+        <div class="alert alert-warning" role="alert">
+            {{message}}
+          </div>
     </div>
 
     <ng-template #elseBlock>
@@ -25,7 +25,7 @@
                 <td>{{user.Email}}</td>
                 <td><a [routerLink]="['/users/userdetails', user.Id]"><button type="button" class="btn btn-warning">Details</button></a></td>
                 <td><a [routerLink]="['/users/userupdate', user.Id]"><button type="button" class="btn btn-success">Update</button></a></td>
-                <td><button type="button" class="btn btn-danger">Delete</button></td>
+                <td><button type="button" class="btn btn-danger" (click)="onDelete(user.Id)">Delete</button></td>
             </tr>
         </tbody>
     </table>

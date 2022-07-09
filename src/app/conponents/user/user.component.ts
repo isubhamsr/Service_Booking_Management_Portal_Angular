@@ -43,8 +43,6 @@ export class UserComponent implements OnInit {
             // this.toastr.success("Logged In successfully");
             this.isSubmit = false;
             this.users = (<any>response).data;
-            console.log((<any>response).data);
-            console.log(this.users);
             
           }
         },

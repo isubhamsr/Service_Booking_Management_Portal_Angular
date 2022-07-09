@@ -9,7 +9,7 @@ import { CanActivate, Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
 
-  name!: string
+    name!: string
     email!: string
     password!: string
     mobile!: number
