@@ -7,6 +7,7 @@ import { UpdateproductComponent } from './conponents/products/updateproduct/upda
 import { ProfileComponent } from './conponents/profile/profile.component';
 import { BookingComponent } from './conponents/service/booking/booking.component';
 import { BookserviceComponent } from './conponents/service/bookservice/bookservice.component';
+import { RequestbyusersComponent } from './conponents/service/requestbyusers/requestbyusers.component';
 import { ServiceComponent } from './conponents/service/service.component';
 import { AddservicereporrtComponent } from './conponents/service/servicereport/addservicereporrt/addservicereporrt.component';
 import { ServicereportComponent } from './conponents/service/servicereport/servicereport.component';
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path: 'services/servicereports', component: ServicereportComponent},
   {path: 'services/addservicereport', component: AddservicereporrtComponent},
   {path: 'services/booking/update/:id', component: UpdaterequestComponent},
+  {path: 'services/bookings/byyou', component: RequestbyusersComponent},
 
   {path: 'profile', component: ProfileComponent},
 
