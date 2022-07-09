@@ -16,7 +16,7 @@ export class ProductdetailsComponent implements OnInit {
   isSubmit = false;
   status!: null;
 
-  Id!: number
+    Id!: number
     Name!: string
     Make!: string
     Model!: number
