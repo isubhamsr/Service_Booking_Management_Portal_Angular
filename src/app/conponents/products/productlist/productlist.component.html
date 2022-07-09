@@ -1,53 +1,32 @@
 <div class="all">
+    <div *ngIf="this.error === true || this.status === 401; else elseBlock">
+        <div class="alert alert-warning" role="alert">
+            {{message}}
+          </div>
+    </div>
+
+    <ng-template #elseBlock> 
     <div class="container pl-8">
 
         <a routerLink="/products/adproduct" class="btn btn-primary card-link ">Add Product</a>
     </div>
     <div class="container">
 
-
-        <div class="card" style="width: 18rem;">
+        <div *ngFor="let product of products; index as i" class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">Ac</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Company Name: Hitachi</h6>
-                <p class="card-text">Model: Hitachi LQ57 32 (81.28cm)</p>
-                <p class="card-text">Cost: 45000</p>
+                <h5 class="card-title">{{product.Name}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Company Name: {{product.Make}}</h6>
+                <p class="card-text">Model: {{product.Model}}</p>
+                <p class="card-text">Cost: {{product.Cost}}</p>
 
-                <a [routerLink]="['/products/productdetails', '2']" class="btn btn-primary card-link">Details</a>
-                <a [routerLink]="['/products/updateproduct', '2']"class="btn btn-primary card-link">Update</a><br />
-                <a [routerLink]="['/services/book', '2']" class="btn btn-primary card-link mt-2">Book</a>
-                <button class="btn btn-danger card-link mt-2">Delete</button>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Mobile</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Company Name: Xiomi</h6>
-                <p class="card-text">Model: Mi 6</p>
-                <p class="card-text">Cost: 20000</p>
-
-                <a routerLink="/detailpage" class="btn btn-primary card-link">Details</a>
-                <a routerLink="/detailpage" class="btn btn-primary card-link">Update</a><br />
-                <a routerLink="/detailpage" class="btn btn-primary card-link mt-2">Book</a>
-                <button class="btn btn-danger card-link mt-2">Delete</button>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Ac</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Company Name: Voltas</h6>
-                <p class="card-text">Model: Voltas LQ57 32 (81.28cm)</p>
-                <p class="card-text">Cost: 50000</p>
-
-                <a routerLink="/detailpage" class="btn btn-primary card-link">Details</a>
-                <a routerLink="/detailpage" class="btn btn-primary card-link">Update</a><br />
-                <a routerLink="/detailpage" class="btn btn-primary card-link mt-2">Book</a>
-                <button class="btn btn-danger card-link mt-2">Delete</button>
+                <a [routerLink]="['/products/productdetails', product.Id]" class="btn btn-primary card-link">Details</a>
+                <a [routerLink]="['/products/updateproduct', product.Id]"class="btn btn-primary card-link">Update</a><br />
+                <a [routerLink]="['/services/book', product.Id]" class="btn btn-primary card-link mt-2">Book</a>
+                <button class="btn btn-danger card-link mt-2" (click)="onDelete(product.Id)">Delete</button>
             </div>
         </div>
         
     </div>
+</ng-template>
 
 </div>
