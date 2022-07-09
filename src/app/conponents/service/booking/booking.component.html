@@ -1,43 +1,41 @@
 <app-navbar></app-navbar>
 <div class="all">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Product ID</th>
-        <th scope="col">Reqest Date</th>
-        <th scope="col">Problem</th>
-        <th scope="col">Description</th>
-        <th scope="col">Status</th>
-        <th scope="col">Details</th>
-        <th scope="col">Update</th>
-        <th scope="col">Delete</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>4</td>
-        <td>15/0/22</td>
-        <td>AC Maintance</td>
-        <td>Cleaning and Maintance</td>
-        <td>Resolved</td>
-        <td><button type="button" class="btn btn-success">Details</button></td>
-        <td><button type="button" class="btn btn-warning">Update</button></td>
-        <td><button type="button" class="btn btn-danger">Delete</button></td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>5</td>
-        <td>15/0/22</td>
-        <td>AC Maintance</td>
-        <td>Cleaning and Maintance</td>
-        <td>Pending</td>
-        <td><button type="button" class="btn btn-success">Details</button></td>
-        <td><button type="button" class="btn btn-warning">Update</button></td>
-        <td><button type="button" class="btn btn-danger">Delete</button></td>
-      </tr>
-    </tbody>
-  </table>
+  <div *ngIf="this.error === true || this.status === 401; else elseBlock">
+    <div class="alert alert-warning" role="alert">
+      {{message}}
+    </div>
   </div>
-  
+
+  <ng-template #elseBlock>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Product ID</th>
+          <th scope="col">Reqest Date</th>
+          <th scope="col">Problem</th>
+          <th scope="col">Description</th>
+          <th scope="col">Status</th>
+          <th scope="col">Details</th>
+          <th scope="col">Update</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let request of serviceReqs; index as i">
+          <th scope="row">1</th>
+          <td>{{request.ProductId}}</td>
+          <td>{{request.ReqDate.slice(0,10)}}</td>
+          <td>{{request.Problem}}</td>
+          <td>{{request.Description}}</td>
+          <td>{{request.Status}}</td>
+          <td><a [routerLink]="['/services/booking/details', request.Id]"><button type="button"
+                class="btn btn-warning">Details</button></a></td>
+          <td><a [routerLink]="['/services/booking/update', request.Id]"><button type="button"
+                class="btn btn-success">Update</button></a></td>
+          <td><button type="button" class="btn btn-danger" (click)="onDelete(request.Id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-template>
+</div>
