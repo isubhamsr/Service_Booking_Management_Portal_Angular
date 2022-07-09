@@ -15,6 +15,7 @@ export class UserlistComponent implements OnInit {
   error = false;
   message!: string;
   isSubmit = false;
+  status!: null;
   
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -38,6 +39,7 @@ export class UserlistComponent implements OnInit {
             this.error = true;
             this.isSubmit = false;
             this.message = (<any>response).message;
+            
           } else {
             this.error = false;
             // this.toastr.success("Logged In successfully");
@@ -49,9 +51,9 @@ export class UserlistComponent implements OnInit {
           }
         },
         (err) => {
-          this.error = true;
           this.isSubmit = false;
-          this.message = err.message;
+          this.message = "Session Expired, You need to login";
+          this.status = err.status
         }
       );
   }

@@ -1,13 +1,12 @@
 <div class="all">
 
-    <div *ngIf="this.error === true">
-        <div class="all">
-        <div class="spinner-border item" role="status">
-            <span class="visually-hidden">Loading...</span>
+    <div *ngIf="this.error === true || this.status === 401; else elseBlock">
+        <div class="item" role="status">
+            <span>{{message}}</span>
         </div>
     </div>
-    </div>
 
+    <ng-template #elseBlock>
     <table class="table">
         <thead>
             <tr>
@@ -30,4 +29,5 @@
             </tr>
         </tbody>
     </table>
+</ng-template>
 </div>
