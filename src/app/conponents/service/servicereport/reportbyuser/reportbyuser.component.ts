@@ -24,16 +24,16 @@ export class ReportbyuserComponent implements OnInit {
     if(token !== null){
       let jwt = JSON.parse(atob(token.split('.')[1]))
       let id = parseInt(jwt.Id)
-      this.getReport(id)
+      this.getReportByUser(id)
     }
     else{
       this.error = true
-      this.message = "Token not fount"
+      this.message = "Token not found"
     }
     
   }
 
-  getReport(id: number) {
+  getReportByUser(id: number) {
     this.isSubmit = true;
     this.http
       .get(`${this.url}/${id}`, {

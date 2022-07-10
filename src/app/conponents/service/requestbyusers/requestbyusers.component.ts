@@ -31,7 +31,7 @@ export class RequestbyusersComponent implements OnInit {
     }
     else{
       this.error = true
-      this.message = "Token not fount"
+      this.message = "Token not found"
     }
     
   }
