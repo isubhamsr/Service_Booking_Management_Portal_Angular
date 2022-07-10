@@ -47,6 +47,12 @@
                     aria-describedby="addon-wrapping">
                 </div>
                 <div class="input-group flex-nowrap">
+                    <input type="number" class="form-control"
+                    [(ngModel)]="SerReqId" 
+                    [ngModelOptions]="{standalone: true}" placeholder="Repair Details"  aria-label="Username"
+                    aria-describedby="addon-wrapping">
+                </div>
+                <div class="input-group flex-nowrap">
                     <input type="text" class="form-control"
                     [(ngModel)]="ServiceType" 
                     [ngModelOptions]="{standalone: true}" placeholder="Service Type"  aria-label="Username"

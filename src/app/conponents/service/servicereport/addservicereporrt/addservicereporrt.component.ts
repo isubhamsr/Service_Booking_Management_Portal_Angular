@@ -23,7 +23,7 @@ export class AddservicereporrtComponent implements OnInit {
     IsPaid!: string
     VisitFees!: number
     RepairDetails!: string
-    SerReqId!: number
+    SerReqId = 5
     ServiceType!: string
 
   constructor(private activatedRoute: ActivatedRoute, private http: HttpClient, private router: Router) { }
@@ -41,6 +41,7 @@ export class AddservicereporrtComponent implements OnInit {
     IsPaid: this.IsPaid === "yes" ? true : false,
     VisitFees: this.VisitFees,
     RepairDetails: this.RepairDetails,
+    SerReqId: this.SerReqId,
     ServiceType: this.ServiceType,
     };
     console.log(repoprt);
