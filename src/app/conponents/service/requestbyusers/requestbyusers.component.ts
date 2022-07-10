@@ -18,8 +18,6 @@ export class RequestbyusersComponent implements OnInit {
   isSubmit = false;
   status!: null;
 
-  id!: number
-
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
