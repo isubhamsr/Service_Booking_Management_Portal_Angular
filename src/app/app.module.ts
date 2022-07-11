@@ -28,6 +28,7 @@ import { UpdaterequestComponent } from './conponents/service/updaterequest/updat
 import { RequestbyusersComponent } from './conponents/service/requestbyusers/requestbyusers.component';
 import { ReportdetailsComponent } from './conponents/service/servicereport/reportdetails/reportdetails.component';
 import { ReportbyuserComponent } from './conponents/service/servicereport/reportbyuser/reportbyuser.component';
+import { BystatusComponent } from './conponents/service/bystatus/bystatus.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { ReportbyuserComponent } from './conponents/service/servicereport/report
     UpdaterequestComponent,
     RequestbyusersComponent,
     ReportdetailsComponent,
-    ReportbyuserComponent
+    ReportbyuserComponent,
+    BystatusComponent
   ],
   imports: [
     BrowserModule,
