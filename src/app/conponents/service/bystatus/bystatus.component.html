@@ -10,12 +10,22 @@
     <table class="table">
       <tbody>
         <tr>
-          <td><a routerLink="/services/bookings/byyou"><button type="button"
-            class="btn btn-success">Your Service Requests</button></a></td>
+          <td><button type="button"
+            class="btn btn-success" (click)="onPending()">
+            <div *ngIf="this.isSubmit != true; else elseBlock">Pending</div>
+            <ng-template #elseBlock><div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </ng-template></button></td>
           <td>
           </td>
-          <td><a routerLink="/services/bookings/bystatus"><button type="button"
-            class="btn btn-success">Get Request by Status</button></a></td>
+          <td><button type="button"
+            class="btn btn-success" (click)="onResolved()">
+            <div *ngIf="this.isSubmit != true; else elseBlock">Resolved</div>
+            <ng-template #elseBlock><div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </ng-template> </button></td>
           <td>
           </td>
         </tr>
@@ -30,9 +40,6 @@
           <th scope="col">Problem</th>
           <th scope="col">Description</th>
           <th scope="col">Status</th>
-          <th scope="col">Update</th>
-          <th scope="col">Delete</th>
-        </tr>
       </thead>
       <tbody>
         <tr *ngFor="let request of serviceReqs; index as i">
@@ -42,15 +49,6 @@
           <td>{{request.Problem}}</td>
           <td>{{request.Description}}</td>
           <td>{{request.Status}}</td>
-          <td><a [routerLink]="['/services/booking/update', request.Id]"><button type="button"
-                class="btn btn-success">Update</button></a></td>
-          <td><button type="button" class="btn btn-danger" (click)="onDelete(request.Id)">
-            <div *ngIf="this.isSubmit != true; else elseBlock">Delete</div>
-            <ng-template #elseBlock><div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-            </ng-template>  
-            </button></td>
         </tr>
       </tbody>
     </table>

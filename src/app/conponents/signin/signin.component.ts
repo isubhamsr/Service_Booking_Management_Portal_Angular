@@ -20,6 +20,10 @@ export class SigninComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
+    let token = localStorage.getItem('token')
+    if(token !== null){
+      this.router.navigate(["/users"]);
+    }
   }
 
   onSubmit(){
