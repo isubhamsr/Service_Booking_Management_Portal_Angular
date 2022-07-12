@@ -34,4 +34,7 @@
             </form>
         </div>
     </ng-template>
+    <button type="submit" (click)="onLogout()" class="btn btn-primary">
+        <div *ngIf="this.isSubmit != true; else elseBlock">Logout</div> 
+    </button>
     </div>

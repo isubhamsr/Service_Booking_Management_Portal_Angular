@@ -23,6 +23,14 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onLogout(){
+    let token = localStorage.getItem("token")
+    if(token !== null || token !== undefined){
+      localStorage.removeItem("token")
+      this.router.navigate(["/signin"]);
+    }
+  }
+
   onSubmit(){
     console.log('ok');
     this.isSubmit = true;
